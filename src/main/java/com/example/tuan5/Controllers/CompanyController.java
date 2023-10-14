@@ -27,10 +27,7 @@ public class CompanyController {
         model.addAttribute("companies", companies);
         return "welcome";
     }
-    @GetMapping("/FormRecruitment")
-    public String anotherPage() {
-        return "FormRecruitment"; // Trả về tên template hoặc trang mà bạn muốn hiển thị
-    }
+
 
 //    @GetMapping
 //    public ResponseEntity<?> getCandidates() {

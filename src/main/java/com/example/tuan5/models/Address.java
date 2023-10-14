@@ -16,12 +16,21 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "add_id")
     private long id;
-    private String city;
-    private CountryCode country;
+
     private String zipCode;
     private String Street;
+    private String city;
     private String number;
-    private String email;
+    private CountryCode country;
+
+
+    public Address(String street, String city, String zipCode, String number, CountryCode country) {
+        Street = street;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.number = number;
+        this.country = country;
+    }
 //    @OneToOne
 //    @JoinColumn(name = "candidate_id")
 //    private Candidate candidate;

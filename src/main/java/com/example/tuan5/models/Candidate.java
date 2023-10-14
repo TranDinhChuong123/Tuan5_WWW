@@ -21,16 +21,25 @@ public class Candidate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "can_id")
     private long id;
-    private String phone;
+    private String fullname;
     private LocalDate dob;
+    private String phone;
 
     private String email;
-    private String fullname;
+
+    public Candidate(String fullname, LocalDate dob, String phone, String email) {
+        this.fullname = fullname;
+        this.dob = dob;
+        this.phone = phone;
+        this.email = email;
+    }
+
     @OneToOne
     @JoinColumn(name = "address")
     private Address address ;
 
 
-//    private String email;
+
+    //    private String email;
 
 }
